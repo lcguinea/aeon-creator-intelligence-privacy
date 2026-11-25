@@ -33,8 +33,8 @@
   <ul>
     <li>About our staff who connect the tool with Facebook Login for Business: Facebook user ID and name, the Facebook
     Page and linked Instagram professional account they choose to share, the permissions granted and an access token.</li>
-    <li>About Instagram creators, through Meta's Instagram Creator Marketplace: username, account ID, biography,
-    country, verification status, whether the creator joined the creator marketplace, follower count, account reach,
+    <li>About Instagram creators, through Meta's Instagram Creator Marketplace: username, account ID, profile picture,
+    biography, country, verification status, whether the creator joined the creator marketplace, follower count, account reach,
     interactions, and aggregated statistics (gender, age range, country, city, follower or non-follower) about the
     accounts that engaged with the creator's content. These are aggregated figures provided by Meta; we never receive
     data about individual followers.</li>
@@ -72,6 +72,8 @@
   under those terms data may also be processed outside the EU, including in the United States, with safeguards such
   as standard contractual clauses. Access tokens are stored encrypted, all connections are encrypted, and the
   database cannot be read through Supabase's public data API, which is switched off.</p>
+  <p>Profile pictures are shown directly from Meta's servers through a temporary link that Meta provides and that
+  expires after a few days. We keep only that link, with the creator's other data, and never store the image.</p>
   <p>The separate version of the tool that we provide to Meta for its app review is also hosted by Render in
   Frankfurt. It keeps data only in memory during a session of up to 30 minutes and does not save it.</p>
 
