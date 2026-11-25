@@ -21,7 +21,7 @@
 <main>
 <article class="aeon-ci-privacy">
   <h1>AEON Creator Intelligence — Privacy Notice</h1>
-  <p><em>Last updated: 8 November 2026</em></p>
+  <p><em>Last updated: 25 November 2026</em></p>
 
   <h2 id="controller">1. Who is responsible and how to contact us</h2>
   <p>AEON Creator Intelligence is an internal tool of the AEON Athletics brand, operated by Aeon Athletics Group, trgovina in
@@ -29,45 +29,73 @@
   8701580000, VAT ID SI10173960 ("we"). Privacy contact:
   <a href="mailto:luis@aeonathletics.com">luis@aeonathletics.com</a>.</p>
 
-  <h2 id="data">2. Data we obtain from Meta</h2>
+  <h2 id="data">2. Data we process</h2>
   <ul>
-    <li>About our staff who log in with Facebook Login for Business: Facebook user ID and name, the Facebook Page and
-    linked Instagram professional account they choose to share, the permissions granted and an access token.</li>
+    <li>About our staff who connect the tool with Facebook Login for Business: Facebook user ID and name, the Facebook
+    Page and linked Instagram professional account they choose to share, the permissions granted and an access token.</li>
     <li>About Instagram creators, through Meta's Instagram Creator Marketplace: username, account ID, biography,
     country, verification status, whether the creator joined the creator marketplace, follower count, account reach,
-    and aggregated statistics (gender, age range, country, city, follower or non-follower) about the accounts that
-    engaged with the creator's content. These are aggregated figures provided by Meta; we never receive data about
-    individual followers.</li>
+    interactions, and aggregated statistics (gender, age range, country, city, follower or non-follower) about the
+    accounts that engaged with the creator's content. These are aggregated figures provided by Meta; we never receive
+    data about individual followers.</li>
+    <li>Information our staff add in the tool: shortlists of creators, the status of a possible partnership and notes.</li>
+    <li>About our staff who use the tool: username, name, role, a one-way hash of their password and a record of the
+    actions they take in the tool.</li>
   </ul>
 
-  <h2 id="purpose">3. Why we use it</h2>
+  <h2 id="purpose">3. Why we use it and on what legal basis</h2>
   <p>Only to identify and evaluate Instagram creators for possible paid partnerships with the AEON Athletics brand,
   to check whether a creator's audience fits our markets, and to let authorised staff connect our own Facebook Page
   and Instagram account. The tool does not contact creators, publish content, sell data or use it for advertising
   targeting. Decisions about partnerships are taken by our staff.</p>
+  <p>We process creator data on the basis of our legitimate interest in finding suitable creators for brand
+  partnerships (Article 6(1)(f) of the GDPR). We use only the data Meta makes available through its Creator
+  Marketplace and only what we need to assess a possible partnership. You can object at any time (see section 7).
+  We process data about our staff to give them secure, individual access to the tool, also on the basis of our
+  legitimate interest.</p>
 
   <h2 id="access">4. Who can access it</h2>
-  <p>Only authorised members of our marketing team. We do not sell this data.</p>
+  <p>Only authorised members of our marketing team, each with a personal account and a role. Their actions are logged.
+  We do not sell this data and we do not export it from the tool.</p>
   <p>The tool does not send data to Anthropic or any other AI provider, and we do not use Anthropic's AI assistant
-  to process data obtained from Meta when operating the tool or during Meta's app review. While the tool was being built and
-  prepared for app review (November 2026), our staff used Anthropic's AI assistant, which processed some of this
-  data, mainly identifiers of our own Facebook Page and Instagram account and Meta's test data.</p>
-  <p>The temporary version of the tool that we provide to Meta for its app review is hosted by Render (Render
-  Services, Inc.) on infrastructure in Frankfurt, Germany; under Render's data processing terms, data may also be
-  processed outside the EU, including in the United States. The tool itself keeps data only in memory during a session
-  of up to 30 minutes and does not save it.</p>
+  to process data obtained from Meta when operating the tool. While the tool was being built and prepared for app
+  review (November 2026), our staff used Anthropic's AI assistant, which processed some of this data, mainly
+  identifiers of our own Facebook Page and Instagram account and Meta's test data. On 25 November 2026, the day the
+  tool started receiving real data from Meta, the assistant also processed the results of a few test queries while a
+  technical fault was being fixed: public profile data and aggregated statistics of 3 creators and the usernames of
+  5 creators. We removed that data from our development files the same day; since then the assistant works only with
+  invented test data.</p>
 
-  <h2 id="retention">5. How long we keep it</h2>
-  <p>We keep creator results and technical request records only for as long as we need them to evaluate possible
-  partnerships, and we delete them sooner if you ask us to (see section 6).</p>
+  <h2 id="hosting">5. Where it is stored</h2>
+  <p>The tool runs on Render (Render Services, Inc.) in Frankfurt, Germany, and stores its data in a database
+  operated by Supabase (Supabase, Inc.) in Ireland. Both act as our processors under their data processing terms;
+  under those terms data may also be processed outside the EU, including in the United States, with safeguards such
+  as standard contractual clauses. Access tokens are stored encrypted, all connections are encrypted, and the
+  database cannot be read through Supabase's public data API, which is switched off.</p>
+  <p>The separate version of the tool that we provide to Meta for its app review is also hosted by Render in
+  Frankfurt. It keeps data only in memory during a session of up to 30 minutes and does not save it.</p>
 
-  <h2 id="data-deletion">6. Your rights and data deletion</h2>
-  <p>To request access to or deletion of your data, or to exercise any other data protection right, e-mail
-  <a href="mailto:luis@aeonathletics.com">luis@aeonathletics.com</a>. If you are a creator, include your Instagram
-  username: we will delete every stored result and record that names your account and reply with a confirmation code.
-  If you logged in to the tool with Facebook, you can also remove the app in your Facebook settings (Business
-  integrations) and e-mail us to delete the data we hold about you. You may also lodge a complaint with your data
-  protection authority.</p>
+  <h2 id="retention">6. How long we keep it</h2>
+  <ul>
+    <li>Creator profiles and statistics: deleted automatically when a creator has not been retrieved or viewed for 90
+    days and is not on an active shortlist. While a creator is on an active shortlist, we refresh the statistics from
+    Meta about once a week; creators our staff viewed in the last 60 days are refreshed about once a month.</li>
+    <li>Earlier versions of a creator's statistics: 180 days.</li>
+    <li>Meta's original responses, kept as a technical record: 30 days.</li>
+    <li>Searches and their result lists: 90 days.</li>
+    <li>Record of staff actions: 365 days.</li>
+    <li>Daily copies of shortlists, statuses and notes, kept for recovery: the last 7 days.</li>
+  </ul>
+  <p>We delete data sooner if you ask us to (see section 7).</p>
+
+  <h2 id="data-deletion">7. Your rights and data deletion</h2>
+  <p>To request access to or deletion of your data, to object to its use, or to exercise any other data protection
+  right, e-mail <a href="mailto:luis@aeonathletics.com">luis@aeonathletics.com</a>. If you are a creator, include your
+  Instagram username: we will delete every stored result and record that names your account, including the daily
+  copies, and reply with a confirmation code. We then keep only a one-way hash of your username and account ID, so
+  that the tool can never retrieve your account again. If you logged in to the tool with Facebook, you can also remove
+  the app in your Facebook settings (Business integrations) and e-mail us to delete the data we hold about you. You
+  may also lodge a complaint with your data protection authority.</p>
 </article>
 </main>
 </body>
